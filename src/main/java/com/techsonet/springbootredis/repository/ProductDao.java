@@ -26,6 +26,7 @@ public class ProductDao {
     }
 
     public Product findById(int id){
+        System.out.println("called  findById() from db");
         return (Product) redisTemplate.opsForHash().get(HASH_KEY, id);
     }
 
